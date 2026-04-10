@@ -89,11 +89,44 @@
   background-color: var(--color-kids);
 }
 
-.kids__status {
+.kids__subtitle {
+  font-family: var(--font-secondary);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-primary);
+  margin-top: var(--space-md);
+}
+
+.kids__list-label {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-kids);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.kids__plus {
   font-family: var(--font-secondary);
   font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
   color: var(--color-text-muted-light);
+  font-style: italic;
+  margin-top: var(--space-sm);
+}
+
+.kids__quote {
+  font-family: var(--font-secondary);
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-prussian-blue);
+  border-left: 3px solid var(--color-kids);
+  padding-left: var(--space-md);
   margin-top: var(--space-lg);
+  max-width: 480px;
 }
 
 .kids__badge {

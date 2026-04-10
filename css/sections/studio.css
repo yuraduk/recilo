@@ -84,6 +84,26 @@
   background-color: var(--color-ash-grey);
 }
 
+.studio__address {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-style: normal;
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  color: var(--color-ash-grey);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(185, 206, 183, 0.25);
+}
+
+.studio__address svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-ash-grey);
+}
+
 @media (min-width: 768px) {
   .studio__grid {
     grid-template-columns: 1.2fr 1fr;

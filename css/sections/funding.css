@@ -63,6 +63,17 @@
   background-color: var(--color-ash-grey);
 }
 
+.funding__ask {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--color-ash-grey);
+  max-width: 560px;
+  border-left: 3px solid var(--color-ash-grey);
+  padding-left: var(--space-md);
+}
+
 .funding__cta {
   margin-top: var(--space-lg);
 }

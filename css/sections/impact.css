@@ -99,6 +99,17 @@
   background-color: var(--color-tech-blue);
 }
 
+.impact-card__vision {
+  font-family: var(--font-secondary);
+  font-style: italic;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-tech-blue);
+  border-left: 2px solid var(--color-tech-blue);
+  padding-left: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
 @media (min-width: 768px) {
   .impact__grid {
     grid-template-columns: repeat(3, 1fr);
