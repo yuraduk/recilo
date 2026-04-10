@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" role="img" aria-label="RECILO">
+  <g fill="none" stroke="#0F244A" stroke-width="2.5">
+    <circle cx="28" cy="28" r="18"/>
+    <circle cx="28" cy="28" r="6" fill="#0F244A"/>
+    <path d="M10 14 A22 22 0 0 1 46 14" stroke-linecap="round"/>
+    <path d="M44 10 L46 14 L42 16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="62" y="37" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="28" letter-spacing="2" fill="#0F244A">RECILO</text>
+</svg>

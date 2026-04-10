@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0F244A" />
+  <title>RECILO — Waste becomes culture</title>
+  <meta name="description" content="RECILO transforms waste into large-scale art installations through collective creation. A circular art and education platform." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/sections/nav.css" />
+  <link rel="stylesheet" href="css/sections/hero.css" />
+  <link rel="stylesheet" href="css/sections/about.css" />
+  <link rel="stylesheet" href="css/sections/problem.css" />
+  <link rel="stylesheet" href="css/sections/model.css" />
+  <link rel="stylesheet" href="css/sections/work.css" />
+  <link rel="stylesheet" href="css/sections/impact.css" />
+  <link rel="stylesheet" href="css/sections/studio.css" />
+  <link rel="stylesheet" href="css/sections/kids.css" />
+  <link rel="stylesheet" href="css/sections/funding.css" />
+  <link rel="stylesheet" href="css/sections/founder.css" />
+  <link rel="stylesheet" href="css/sections/cta.css" />
+  <link rel="stylesheet" href="css/sections/footer.css" />
+</head>
+<body>
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="RECILO home">
+        <img src="assets/logo/recilo-logo-white.svg" alt="RECILO" />
+      </a>
+
+      <button
+        class="nav__toggle"
+        data-nav-toggle
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav__menu" id="primary-nav" data-nav-menu aria-label="Primary">
+        <a href="#about" class="nav__link" data-nav-link>What We Do</a>
+        <a href="#work" class="nav__link" data-nav-link>Our Work</a>
+        <a href="#impact" class="nav__link" data-nav-link>Impact</a>
+        <a href="#studio" class="nav__link" data-nav-link>Studio</a>
+        <a href="#kids" class="nav__link" data-nav-link>Kids Lab</a>
+        <a href="#funding" class="nav__link" data-nav-link>Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================
+         SCREEN 1 — HERO
+         ============================================ -->
+    <section class="hero" id="hero">
+      <img src="assets/images/hero/hero-bg.jpg" alt="" class="hero__bg" aria-hidden="true" />
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__label">RECILO</p>
+        <h1 class="hero__title" data-word-reveal="on-load">
+          Waste to <span class="accent">Art</span>
+        </h1>
+        <p class="hero__subtitle" data-animate="fade-up" style="--delay: 300ms;">
+          Transforming waste into art and communities into creators.
+        </p>
+        <a
+          href="#funding"
+          class="btn btn--primary hero__cta"
+          data-animate="fade-up"
+          data-link="partner"
+          style="--delay: 500ms;"
+        >
+          Partner with us
+        </a>
+      </div>
+
+      <a href="#about" class="hero__scroll scroll-indicator" aria-label="Scroll to next section">
+        <span>Scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M6 13l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- ============================================
+         SCREEN 2 — WHAT IS RECILO
+         ============================================ -->
+    <section class="section section--light about" id="about">
+      <div class="brand-arc brand-arc--cream brand-arc--bottom-right" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="grid-2">
+          <div data-animate="slide-left">
+            <div class="about__image">
+              <img src="assets/images/about/about-main.jpg" alt="RECILO workshop scene" />
+            </div>
+          </div>
+
+          <div>
+            <p class="section-label" data-animate="fade-up">About</p>
+            <h2 class="about__title" data-word-reveal>
+              What is <span class="accent">Recilo</span>
+            </h2>
+            <p class="about__text" data-animate="fade-up" style="--delay: 200ms;">
+              RECILO is a community-driven art and environmental initiative that transforms waste into large-scale installations through collective creation.
+            </p>
+            <p class="about__text" data-animate="fade-up" style="--delay: 350ms;">
+              We combine material reuse, public participation, and art-based engagement into one system.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREEN 3 — THE PROBLEM
+         ============================================ -->
+    <section class="section problem" id="problem">
+      <img src="assets/images/problem/problem-bg.jpg" alt="" class="problem__bg" aria-hidden="true" />
+      <div class="problem__overlay" aria-hidden="true"></div>
+
+      <div class="problem__content">
+        <p class="section-label section-label--light" data-animate="fade-up">The Problem</p>
+
+        <div class="problem__stats" data-stagger>
+          <div class="stat">
+            <span
+              class="stat__number"
+              data-counter="400"
+              data-counter-suffix="M+"
+            >0</span>
+            <span class="stat__label">tons of plastic produced annually</span>
+          </div>
+
+          <div class="stat">
+            <span
+              class="stat__number stat__number--accent"
+              data-counter="9"
+              data-counter-prefix="<"
+              data-counter-suffix="%"
+            >0</span>
+            <span class="stat__label">is recycled</span>
+          </div>
+
+          <div class="stat">
+            <span
+              class="stat__number"
+              data-counter="14"
+              data-counter-suffix="M+"
+            >0</span>
+            <span class="stat__label">tons of waste in New York alone</span>
+          </div>
+        </div>
+
+        <div class="problem__divider" aria-hidden="true"></div>
+
+        <p class="problem__quote" data-animate="fade-up">
+          Most of it is treated as something to discard.<br />
+          We treat it as a resource.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREEN 4 — OUR MODEL
+         ============================================ -->
+    <section class="section section--light model" id="model">
+      <div class="brand-arc brand-arc--top-left" aria-hidden="true"></div>
+
+      <div class="container">
+        <p class="section-label" data-animate="fade-up">How We Work</p>
+        <h2 class="model__title" data-word-reveal>
+          One system — <span class="accent">three layers of impact</span>
+        </h2>
+
+        <div class="model__flow" data-stagger>
+          <div class="model__step">
+            <div class="model__step-number">
+              <svg class="model__step-icon" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7h18M6 7v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+              </svg>
+            </div>
+            <span class="model__step-label">Collect</span>
+            <p class="model__step-text">&nbsp;</p>
+          </div>
+
+          <div class="model__connector" aria-hidden="true"></div>
+
+          <div class="model__step">
+            <div class="model__step-number">
+              <svg class="model__step-icon" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5" />
+              </svg>
+            </div>
+            <span class="model__step-label">Transform</span>
+            <p class="model__step-text">&nbsp;</p>
+          </div>
+
+          <div class="model__connector" aria-hidden="true"></div>
+
+          <div class="model__step">
+            <div class="model__step-number">
+              <svg class="model__step-icon" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 20v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <span class="model__step-label">Engage</span>
+            <p class="model__step-text">&nbsp;</p>
+          </div>
+
+          <div class="model__connector" aria-hidden="true"></div>
+
+          <div class="model__step">
+            <div class="model__step-number">
+              <svg class="model__step-icon" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" />
+              </svg>
+            </div>
+            <span class="model__step-label">Build</span>
+            <p class="model__step-text">&nbsp;</p>
+          </div>
+        </div>
+
+        <p class="model__note" data-animate="fade-up">
+          Detailed descriptions for each step to be added.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREEN 5 — CURRENT WORK
+         ============================================ -->
+    <section class="section section--dark work" id="work">
+      <div class="brand-arc brand-arc--top-right" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="work__header">
+          <p class="section-label section-label--light" data-animate="fade-up">Active Projects</p>
+          <h2 class="work__title" data-word-reveal>
+            Current <span class="accent">Work</span>
+          </h2>
+        </div>
+
+        <div class="work__grid" data-stagger>
+          <article class="work-card">
+            <div class="work-card__img">
+              <img src="assets/images/work/work-1.jpg" alt="Featured installation" />
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__label">Featured Project</span>
+              <h3 class="work-card__title">Burning Man 2026</h3>
+              <p class="work-card__text">
+                Large-scale installation built from collected plastic waste.
+              </p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__img">
+              <img src="assets/images/work/work-2.jpg" alt="Art environment workshop" />
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__label">Ongoing</span>
+              <h3 class="work-card__title">Art Environments</h3>
+              <p class="work-card__text">
+                Collaborative builds creating immersive public art spaces.
+              </p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__img">
+              <img src="assets/images/work/work-3.jpg" alt="Custom installation materials" />
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__label">Available</span>
+              <h3 class="work-card__title">Custom Installations</h3>
+              <p class="work-card__text">
+                Working with communities to create site-specific pieces.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="work__divider" aria-hidden="true"></div>
+
+        <div class="work__services">
+          <p class="work__services-label">What we do</p>
+          <ul class="work__services-list">
+            <li>Collaborative builds</li>
+            <li>Workshops</li>
+            <li>Installations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREEN 6 — IMPACT
+         ============================================ -->
+    <section class="section impact" id="impact">
+      <div class="container">
+        <div class="impact__header">
+          <p class="section-label" data-animate="fade-up">Our Impact</p>
+          <h2 class="impact__title" data-word-reveal>
+            What We <span class="accent">Achieve</span>
+          </h2>
+        </div>
+
+        <div class="impact__grid" data-stagger>
+          <article class="impact-card">
+            <div class="impact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z" />
+                <path d="M7 12c2.5-1 5-1 7.5 0M7 8c2.5-1 5-1 7.5 0M7 16c2.5-1 5-1 7.5 0" />
+              </svg>
+            </div>
+            <h3 class="impact-card__title">Environmental</h3>
+            <ul class="impact-card__list">
+              <li>Material reuse</li>
+              <li>Landfill reduction</li>
+              <li>Support for local cycles</li>
+            </ul>
+          </article>
+
+          <article class="impact-card">
+            <div class="impact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 20v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 class="impact-card__title">Social</h3>
+            <ul class="impact-card__list">
+              <li>
+                <span
+                  data-counter="100"
+                  data-counter-suffix="+"
+                >0</span> participants
+              </li>
+              <li>Inclusion & accessibility</li>
+              <li>Community building</li>
+            </ul>
+          </article>
+
+          <article class="impact-card">
+            <div class="impact-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.7.6 1 1.4 1 2.3h6c0-.9.3-1.7 1-2.3A7 7 0 0 0 12 2z" />
+              </svg>
+            </div>
+            <h3 class="impact-card__title">Educational</h3>
+            <ul class="impact-card__list">
+              <li>Hands-on learning</li>
+              <li>Environmental awareness</li>
+              <li>Material understanding</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREEN 7 — RECILO STUDIO
+         ============================================ -->
+    <section class="section section--dark studio" id="studio">
+      <div class="brand-arc brand-arc--bottom-left" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="studio__grid">
+          <div data-animate="slide-left">
+            <div class="studio__image">
+              <img src="assets/images/studio/studio-main.jpg" alt="RECILO Studio production space" />
+            </div>
+          </div>
+
+          <div>
+            <p class="section-label section-label--light" data-animate="fade-up">Infrastructure</p>
+            <h2 class="studio__title" data-word-reveal>
+              Recilo <span class="accent">Studio</span>
+            </h2>
+            <p class="studio__lead" data-animate="fade-up" style="--delay: 200ms;">
+              The operational core of RECILO.
+            </p>
+            <p class="studio__list-label" data-animate="fade-up" style="--delay: 300ms;">A space where:</p>
+            <ul class="studio__list" data-animate="fade-up" style="--delay: 400ms;">
+              <li>Materials are processed</li>
+              <li>Installations are built</li>
+              <li>Workshops take place</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREEN 8 — RECILO KIDS LAB
+         ============================================ -->
+    <section class="section kids" id="kids">
+      <div class="container">
+        <div class="kids__grid">
+          <div data-animate="slide-left">
+            <div class="kids__image">
+              <img src="assets/images/kids/kids-main.jpg" alt="Children in RECILO workshop" />
+            </div>
+          </div>
+
+          <div>
+            <p class="section-label section-label--kids" data-animate="fade-up">Coming Soon</p>
+            <h2 class="kids__title" data-word-reveal>
+              Recilo <span class="accent">Kids Lab</span>
+            </h2>
+            <p class="kids__lead" data-animate="fade-up" style="--delay: 200ms;">
+              Children will:
+            </p>
+            <ul class="kids__list" data-animate="fade-up" style="--delay: 300ms;">
+              <li>Bring plastic waste</li>
+              <li>Transform it into material</li>
+              <li>Create objects and art</li>
+            </ul>
+            <p class="kids__status" data-animate="fade-up" style="--delay: 400ms;">
+              We are building this program now.
+            </p>
+            <span class="kids__badge" data-animate="fade-up" style="--delay: 500ms;">
+              Upcoming Program
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREEN 9 — FUNDING
+         ============================================ -->
+    <section class="section section--dark funding" id="funding">
+      <div class="brand-arc brand-arc--top-right" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="funding__content">
+          <p class="section-label section-label--light" data-animate="fade-up">Support Us</p>
+          <h2 class="funding__title" data-word-reveal>
+            We are <span class="accent">seeking support</span>
+          </h2>
+          <p class="funding__lead" data-animate="fade-up" style="--delay: 200ms;">
+            To build the Kids Lab, we need:
+          </p>
+          <ul class="funding__list" data-animate="fade-up" style="--delay: 300ms;">
+            <li>Equipment purchase</li>
+            <li>Workshop infrastructure</li>
+            <li>Program launch costs</li>
+            <li>Expanding community access</li>
+          </ul>
+          <a
+            href="#"
+            class="btn btn--primary funding__cta pulse"
+            data-link="support"
+            data-animate="fade-up"
+            style="--delay: 500ms;"
+          >
+            Support Our Work
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREEN 10 — FOUNDER
+         ============================================ -->
+    <section class="section section--light founder" id="founder">
+      <div class="container container--narrow">
+        <div class="founder__grid">
+          <div class="founder__image" data-animate="fade-in">
+            <img src="assets/images/founder/anna-niss.jpg" alt="Anna Niss, founder of RECILO" />
+          </div>
+
+          <div>
+            <p class="section-label" data-animate="fade-up">Who We Are</p>
+            <h2 class="founder__name" data-animate="fade-up" style="--delay: 100ms;">Anna Niss</h2>
+            <p class="founder__role" data-animate="fade-up" style="--delay: 200ms;">Founder</p>
+            <ul class="founder__list" data-animate="fade-up" style="--delay: 300ms;">
+              <li>1,000+ hours of facilitation experience</li>
+              <li>Background in psychology & economics</li>
+              <li>Led multiple community-based projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SCREEN 11 — FINAL CTA
+         ============================================ -->
+    <section class="section cta" id="join">
+      <img src="assets/images/cta/cta-bg.jpg" alt="" class="cta__bg" aria-hidden="true" />
+      <div class="cta__overlay" aria-hidden="true"></div>
+
+      <div class="cta__content">
+        <h2 class="cta__title" data-word-reveal>
+          <span class="accent">Join</span> Recilo
+        </h2>
+
+        <p class="cta__lead" data-animate="fade-up" style="--delay: 200ms;">
+          How to get involved:
+        </p>
+
+        <div class="cta__buttons" data-stagger>
+          <a href="#" class="btn btn--outline-light btn--block" data-link="partner">Partner</a>
+          <a href="#" class="btn btn--primary btn--block" data-link="commission">Commission Work</a>
+          <a href="#funding" class="btn btn--outline-light btn--block" data-link="support">Support Us</a>
+        </div>
+
+        <div class="cta__meta" data-animate="fade-up" style="--delay: 500ms;">
+          <p>Stamford, CT</p>
+          <p><a href="mailto:hello@recilo.org">hello@recilo.org</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="#hero" class="footer__logo" aria-label="RECILO home">
+        <img src="assets/logo/recilo-logo-white.svg" alt="RECILO" />
+      </a>
+
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#about">What We Do</a>
+        <a href="#work">Our Work</a>
+        <a href="#impact">Impact</a>
+        <a href="#funding">Support</a>
+      </nav>
+
+      <p class="footer__copy">&copy; 2026 RECILO. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

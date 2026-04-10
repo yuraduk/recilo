@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Source image dump (raw images before renaming/copying)
+RECILIO Project/
+
+# Claude Code local settings
+.claude/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Node (in case a local dev server is added later)
+node_modules/
+npm-debug.log*

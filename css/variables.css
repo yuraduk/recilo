@@ -1,0 +1,106 @@
+/* RECILO Design Tokens — from Brand Book 2026 */
+
+:root {
+  /* ============================================
+     COLORS — Primary Palette
+     ============================================ */
+  --color-prussian-blue: #0F244A;
+  --color-ash-grey: #B9CEB7;
+  --color-white: #FFFFFF;
+
+  /* Secondary Palette */
+  --color-tech-blue: #0D5BBA;
+  --color-wisteria-blue: #85A7EA;
+  --color-almond-cream: #EBDECE;
+
+  /* Sub-brand Accent Colors */
+  --color-kids: #E79A4C;       /* Golden Apricot */
+  --color-art: #4BBBE6;        /* Sky Surge */
+  --color-camp: #E7DF4C;       /* Banana Cream */
+  --color-merch: #8C4CE7;      /* Purple X11 */
+
+  /* Semantic aliases */
+  --color-bg-dark: var(--color-prussian-blue);
+  --color-bg-darker: #0A1A38;
+  --color-bg-light: var(--color-white);
+  --color-bg-warm: var(--color-almond-cream);
+  --color-card-dark: #0D1B35;
+
+  --color-text-primary: var(--color-prussian-blue);
+  --color-text-on-dark: var(--color-white);
+  --color-text-muted-dark: var(--color-ash-grey);
+  --color-text-muted-light: #6B7A8F;
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  --font-primary: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-secondary: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: clamp(2rem, 6vw, 3.5rem);
+  --text-4xl: clamp(2.5rem, 7vw, 4.5rem);
+  --text-hero: clamp(2.5rem, 10vw, 6rem);
+  --text-stat: clamp(3.5rem, 12vw, 8rem);
+
+  /* Line heights */
+  --leading-tight: 1.05;
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* Letter spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  --tracking-widest: 0.18em;
+
+  /* ============================================
+     SPACING
+     ============================================ */
+  --space-xs: 0.5rem;     /* 8px */
+  --space-sm: 1rem;       /* 16px */
+  --space-md: 1.5rem;     /* 24px */
+  --space-lg: 2rem;       /* 32px */
+  --space-xl: 3rem;       /* 48px */
+  --space-2xl: 5rem;      /* 80px */
+  --space-3xl: 8rem;      /* 128px */
+
+  --section-padding-y: clamp(4rem, 10vw, 8rem);
+  --section-padding-x: clamp(1.25rem, 5vw, 3rem);
+  --content-max-width: 1280px;
+  --content-max-width-narrow: 960px;
+
+  /* ============================================
+     LAYOUT
+     ============================================ */
+  --nav-height-mobile: 56px;
+  --nav-height-desktop: 64px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* ============================================
+     MOTION
+     ============================================ */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-slow: 700ms;
+  --duration-slower: 900ms;
+
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  --shadow-sm: 0 2px 8px rgba(15, 36, 74, 0.08);
+  --shadow-md: 0 8px 24px rgba(15, 36, 74, 0.12);
+  --shadow-lg: 0 16px 48px rgba(15, 36, 74, 0.18);
+}

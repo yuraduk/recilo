@@ -1,0 +1,110 @@
+/* RECILO Typography — Manrope + Source Sans 3 */
+
+body {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-light);
+}
+
+h1, h2, h3, h4, h5, h6,
+.heading {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+}
+
+.section-label {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-tech-blue);
+  display: inline-block;
+  margin-bottom: var(--space-md);
+}
+
+.section-label--light {
+  color: var(--color-ash-grey);
+}
+
+.section-label--kids {
+  color: var(--color-kids);
+}
+
+.heading-hero {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-hero);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+}
+
+.heading-xl {
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+}
+
+.heading-lg {
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+}
+
+.heading-md {
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+}
+
+.text-body {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.text-body--sm {
+  font-size: var(--text-base);
+}
+
+.text-muted {
+  color: var(--color-text-muted-light);
+}
+
+.text-ash {
+  color: var(--color-ash-grey);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-blue {
+  color: var(--color-prussian-blue);
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+/* Utility: word-wrap container for word-reveal animations */
+.word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  line-height: var(--leading-tight);
+}
+
+.word-wrap .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(110%);
+  transition:
+    opacity 0.6s var(--ease-out-expo),
+    transform 0.6s var(--ease-out-expo);
+}

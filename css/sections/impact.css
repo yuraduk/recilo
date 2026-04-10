@@ -1,0 +1,107 @@
+/* SCREEN 6 — IMPACT */
+
+.impact {
+  background-color: var(--color-almond-cream);
+  position: relative;
+}
+
+.impact__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.impact__title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+  color: var(--color-prussian-blue);
+}
+
+.impact__title .accent {
+  color: var(--color-ash-grey);
+}
+
+.impact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.impact-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--duration-base) var(--ease-out-expo),
+    box-shadow var(--duration-base) ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.impact-card__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-prussian-blue);
+}
+
+.impact-card__icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.impact-card__title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-prussian-blue);
+}
+
+.impact-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.impact-card__list li {
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  color: var(--color-text-primary);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.impact-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 8px;
+  height: 2px;
+  background-color: var(--color-tech-blue);
+}
+
+@media (min-width: 768px) {
+  .impact__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+}
