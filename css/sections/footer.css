@@ -17,12 +17,13 @@
 }
 
 .footer__logo {
-  height: 28px;
+  height: 24px;
 }
 
 .footer__logo img {
   height: 100%;
   width: auto;
+  max-width: 140px;
 }
 
 .footer__nav {

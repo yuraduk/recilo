@@ -31,13 +31,14 @@
 .nav__logo {
   display: flex;
   align-items: center;
-  height: 32px;
+  height: 28px;
   z-index: 110;
 }
 
 .nav__logo img {
   height: 100%;
   width: auto;
+  max-width: 160px;
 }
 
 /* Hamburger */
