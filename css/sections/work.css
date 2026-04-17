@@ -126,13 +126,15 @@
    BRAND COLOUR ACCENTS
    Top bar + coloured name per sub-brand
    ==================================== */
-.project-card--art::before    { background: var(--color-art); }
-.project-card--kids::before   { background: var(--color-kids); }
-.project-card--studio::before { background: var(--color-ash-grey); }
+.project-card--art::before     { background: var(--color-art); }
+.project-card--kids::before    { background: var(--color-kids); }
+.project-card--studio::before  { background: var(--color-ash-grey); }
+.project-card--healing::before { background: #FFEDA8; }
 
-.project-card--art    .project-card__name { color: var(--color-art); }
-.project-card--kids   .project-card__name { color: var(--color-kids); }
-.project-card--studio .project-card__name { color: var(--color-ash-grey); }
+.project-card--art     .project-card__name { color: var(--color-art); }
+.project-card--kids    .project-card__name { color: var(--color-kids); }
+.project-card--studio  .project-card__name { color: var(--color-ash-grey); }
+.project-card--healing .project-card__name { color: #FFEDA8; }
 
 /* ====================================
    DESKTOP — switch to 3-column grid
@@ -140,7 +142,7 @@
 @media (min-width: 768px) {
   .projects__track {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
     overflow-x: visible;
     scroll-snap-type: none;
@@ -158,6 +160,7 @@
 
 @media (min-width: 1024px) {
   .projects__track {
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-xl);
   }
 }
