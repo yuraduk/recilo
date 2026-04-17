@@ -69,6 +69,17 @@
   transform: scale(1.03);
 }
 
+/* Thick top accent bar — set per variant */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 16px;
+  z-index: 2;
+}
+
 /* Image fills the full card */
 .project-card__img {
   position: absolute;
@@ -85,36 +96,43 @@
   display: block;
 }
 
-/* Name overlay — gradient + white text at bottom */
+/* Name overlay — dark gradient + name at bottom */
 .project-card__info {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: var(--space-2xl) var(--space-md) var(--space-md);
+  padding: var(--space-3xl) var(--space-lg) var(--space-lg);
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.78) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
     transparent 100%
   );
+  z-index: 1;
 }
 
 .project-card__name {
   font-family: var(--font-primary);
   font-weight: 700;
-  font-size: var(--text-xl);
-  letter-spacing: var(--tracking-wide);
+  font-size: var(--text-3xl);
+  letter-spacing: var(--tracking-tight);
   text-transform: uppercase;
-  color: var(--color-white);
+  line-height: var(--leading-tight);
+  /* name in brand color — set per variant */
 }
 
 /* ====================================
    BRAND COLOUR ACCENTS
+   Top bar + coloured name per sub-brand
    ==================================== */
-.project-card--art    { border-top-color: var(--color-art); }
-.project-card--kids   { border-top-color: var(--color-kids); }
-.project-card--studio { border-top-color: var(--color-ash-grey); }
+.project-card--art::before    { background: var(--color-art); }
+.project-card--kids::before   { background: var(--color-kids); }
+.project-card--studio::before { background: var(--color-ash-grey); }
+
+.project-card--art    .project-card__name { color: var(--color-art); }
+.project-card--kids   .project-card__name { color: var(--color-kids); }
+.project-card--studio .project-card__name { color: var(--color-ash-grey); }
 
 /* ====================================
    DESKTOP — switch to 3-column grid
