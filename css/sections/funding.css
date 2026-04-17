@@ -21,11 +21,11 @@
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
   text-transform: uppercase;
-  color: var(--color-white);
+  color: var(--color-prussian-blue);
 }
 
 .funding__title .accent {
-  color: var(--color-ash-grey);
+  color: var(--color-tech-blue);
   display: block;
 }
 
@@ -33,7 +33,7 @@
   font-family: var(--font-secondary);
   font-size: var(--text-xl);
   line-height: var(--leading-relaxed);
-  color: var(--color-white);
+  color: var(--color-text-primary);
 }
 
 .funding__list {
@@ -48,7 +48,7 @@
 .funding__list li {
   font-family: var(--font-secondary);
   font-size: var(--text-lg);
-  color: var(--color-white);
+  color: var(--color-text-primary);
   padding-left: var(--space-md);
   position: relative;
 }
@@ -60,7 +60,7 @@
   top: 0.75em;
   width: 12px;
   height: 2px;
-  background-color: var(--color-ash-grey);
+  background-color: var(--color-tech-blue);
 }
 
 .funding__ask {
@@ -68,9 +68,9 @@
   font-weight: 600;
   font-size: var(--text-xl);
   line-height: var(--leading-snug);
-  color: var(--color-ash-grey);
+  color: var(--color-prussian-blue);
   max-width: 560px;
-  border-left: 3px solid var(--color-ash-grey);
+  border-left: 3px solid var(--color-tech-blue);
   padding-left: var(--space-md);
 }
 
