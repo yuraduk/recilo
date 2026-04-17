@@ -38,7 +38,7 @@
   scrollbar-width: none;
   /* Left aligns with container content; right bleeds to screen edge */
   margin-right: calc(var(--section-padding-x) * -1);
-  padding-right: var(--space-sm); /* breathing room before edge */
+  padding-right: var(--space-sm);
   padding-bottom: var(--space-sm);
 }
 
@@ -137,30 +137,30 @@
 .project-card--healing .project-card__name { color: #FFEDA8; }
 
 /* ====================================
-   DESKTOP — switch to 3-column grid
+   DESKTOP — 2×2 grid, fixed card size
    ==================================== */
 @media (min-width: 768px) {
   .projects__track {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 340px);
+    justify-content: center;
     gap: var(--space-lg);
     overflow-x: visible;
     scroll-snap-type: none;
-    margin-inline: 0;
-    padding-inline: 0;
+    margin-right: 0;
+    padding-right: 0;
     padding-bottom: 0;
   }
 
   .project-card {
     flex: none;
-    max-width: none;
     min-width: 0;
   }
 }
 
 @media (min-width: 1024px) {
   .projects__track {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 360px);
     gap: var(--space-xl);
   }
 }
