@@ -137,14 +137,13 @@
 .project-card--healing .project-card__name { color: #FFEDA8; }
 
 /* ====================================
-   DESKTOP — 2×2 grid, fixed card size
+   DESKTOP — 4 in a row, compact gap
    ==================================== */
 @media (min-width: 768px) {
   .projects__track {
     display: grid;
-    grid-template-columns: repeat(2, 340px);
-    justify-content: center;
-    gap: var(--space-lg);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
     overflow-x: visible;
     scroll-snap-type: none;
     margin-right: 0;
@@ -156,11 +155,9 @@
     flex: none;
     min-width: 0;
   }
-}
 
-@media (min-width: 1024px) {
-  .projects__track {
-    grid-template-columns: repeat(2, 360px);
-    gap: var(--space-xl);
+  /* Scale name with card width — card is ~25% of viewport */
+  .project-card__name {
+    font-size: clamp(1rem, 2vw, 1.75rem);
   }
 }
