@@ -36,9 +36,9 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  /* Bleed to screen edges on mobile for immersive feel */
-  margin-inline: calc(var(--section-padding-x) * -1);
-  padding-inline: var(--section-padding-x);
+  /* Left aligns with container content; right bleeds to screen edge */
+  margin-right: calc(var(--section-padding-x) * -1);
+  padding-right: var(--space-sm); /* breathing room before edge */
   padding-bottom: var(--space-sm);
 }
 
