@@ -60,8 +60,18 @@
   overflow: hidden;
   display: block;
   text-decoration: none;
+  /* button reset */
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
   /* Colored top accent — set per variant */
   border-top: 4px solid transparent;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
   transition: transform var(--duration-base) var(--ease-out-expo);
 }
 

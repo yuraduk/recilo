@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/sections/about.css?v=2" />
   <link rel="stylesheet" href="css/sections/problem.css?v=1" />
   <link rel="stylesheet" href="css/sections/model.css?v=3" />
-  <link rel="stylesheet" href="css/sections/work.css?v=7" />
+  <link rel="stylesheet" href="css/sections/work.css?v=8" />
   <link rel="stylesheet" href="css/sections/impact.css?v=1" />
   <link rel="stylesheet" href="css/sections/studio.css?v=1" />
   <link rel="stylesheet" href="css/sections/kids.css?v=1" />
@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="css/sections/founder.css?v=3" />
   <link rel="stylesheet" href="css/sections/cta.css?v=1" />
   <link rel="stylesheet" href="css/sections/footer.css?v=1" />
+  <link rel="stylesheet" href="css/sections/overlay.css?v=1" />
 </head>
 <body>
   <!-- ============================================
@@ -324,34 +325,34 @@
         <div class="projects__track" data-animate="fade-up">
 
           <!-- Recilo Art — Sky Surge #4BBBE6 -->
-          <a href="#" class="project-card project-card--art">
+          <button class="project-card project-card--art" onclick="openProjectOverlay('art', this)" aria-label="Open Recilo Art">
             <div class="project-card__img">
               <img src="assets/images/work/work-1.png?v=2" alt="Recilo Art" />
             </div>
             <div class="project-card__info">
               <h3 class="project-card__name">Recilo Art</h3>
             </div>
-          </a>
+          </button>
 
           <!-- Recilo Kids Lab — Golden Apricot #E79A4C -->
-          <a href="#" class="project-card project-card--kids">
+          <button class="project-card project-card--kids" onclick="openProjectOverlay('kids', this)" aria-label="Open Recilo Kids Lab">
             <div class="project-card__img">
               <img src="assets/images/work/work-2.png?v=3" alt="Recilo Kids Lab" />
             </div>
             <div class="project-card__info">
-              <h3 class="project-card__name">Recilo Kids Lab</h3>
+              <h3 class="project-card__name">Recilo Teens</h3>
             </div>
-          </a>
+          </button>
 
           <!-- Recilo Studio — Ash Grey #B9CEB7 -->
-          <a href="#" class="project-card project-card--studio">
+          <button class="project-card project-card--studio" onclick="openProjectOverlay('studio', this)" aria-label="Open Recilo Studio">
             <div class="project-card__img">
               <img src="assets/images/work/work-3.png?v=2" alt="Recilo Studio" />
             </div>
             <div class="project-card__info">
               <h3 class="project-card__name">Recilo Studio</h3>
             </div>
-          </a>
+          </button>
 
         </div>
       </div>
@@ -591,8 +592,308 @@
     </div>
   </footer>
 
+  <!-- ============================================
+       PROJECT DETAIL OVERLAY
+       ============================================ -->
+  <div class="project-overlay" id="projectOverlay" role="dialog" aria-modal="true" aria-label="Project details">
+
+    <!-- HERO -->
+    <div class="ov-hero">
+      <img class="ov-hero__img" id="ovHeroImg" src="" alt="" />
+
+      <div class="ov-topbar">
+        <button class="ov-back" onclick="closeProjectOverlay()">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 2L4 7l5 5"/>
+          </svg>
+          Back
+        </button>
+        <button class="ov-close" onclick="closeProjectOverlay()" aria-label="Close">✕</button>
+      </div>
+
+      <div class="ov-hero__content">
+        <div class="ov-hero__label" id="ovLabel"></div>
+        <div class="ov-hero__title" id="ovTitle"></div>
+        <div class="ov-hero__tags" id="ovTags"></div>
+      </div>
+    </div>
+
+    <!-- SCROLLABLE BODY -->
+    <div class="ov-body" id="ovBody">
+
+      <!-- STATS -->
+      <div class="ov-stats" id="ovStats"></div>
+
+      <!-- CONCEPT -->
+      <div class="ov-section" id="ovConcept"></div>
+
+      <!-- GALLERY -->
+      <div class="ov-gallery" id="ovGallery"></div>
+
+      <!-- HOW IT WORKS -->
+      <div class="ov-section" id="ovHow"></div>
+
+      <!-- IMPACT -->
+      <div class="ov-section" id="ovImpact"></div>
+
+      <!-- CTA -->
+      <div class="ov-cta">
+        <div>
+          <div class="ov-cta__text">Want to join<br>the next project?</div>
+          <div class="ov-cta__sub">Open workshops, partnerships & donations</div>
+        </div>
+        <a href="#contact" class="ov-cta__btn" onclick="closeProjectOverlay()">
+          Get in touch
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7h8M8 4l3 3-3 3"/>
+          </svg>
+        </a>
+      </div>
+
+    </div><!-- /ov-body -->
+  </div><!-- /project-overlay -->
+
   <!-- Scripts -->
   <script src="js/nav.js"></script>
   <script src="js/animations.js"></script>
+  <script>
+  /* ============================================
+     PROJECT DATA
+     ============================================ */
+  const PROJECTS = {
+    art: {
+      label: 'Recilo Project',
+      title: 'Recilo<br>Art',
+      accent: '#4BBBE6',
+      heroImg: 'assets/images/recilo_art/3.png',
+      tags: ['Plastic', 'Installation', 'Co-creation', 'New York'],
+      stats: [
+        { value: '18.5%', label: 'NYC diversion rate' },
+        { value: '9%',    label: 'Plastic recycled globally' },
+        { value: '12M+',  label: 'Tons of waste / year NYC' },
+      ],
+      concept: {
+        eyebrow: 'Waste becomes material. Plastic becomes meaning.',
+        heading: 'Why it matters',
+        paragraphs: [
+          'New York generates millions of tons of waste every year, while recycling still captures only part of what could be recovered. DSNY reports that the city\'s FY2025 curbside and containerized diversion rate was 18.5%, and its DSNY-managed diversion rate was 21.8%. At the same time, New York City generates more than 12 million tons of waste each year, which shows how much material still remains underused.',
+          'Recilo Art exists to change the way people see waste. We focus on plastic not only as something to remove from the city, but as a raw material for new creative life. Globally, the plastics system is still far from circular: the OECD reports that only 9% of plastic waste is ultimately recycled. That is why our approach matters — we do not see waste as an endpoint, but as the beginning of something useful, visible, and beautiful.',
+        ],
+      },
+      gallery: {
+        main: ['assets/images/recilo_art/2.png', 'assets/images/recilo_art/4.png', 'assets/images/recilo_art/5.png'],
+        thumbs: ['assets/images/recilo_art/1.png', 'assets/images/recilo_art/6.png', 'assets/images/recilo_art/7.png', 'assets/images/recilo_art/8.png'],
+      },
+      how: {
+        eyebrow: 'How it works',
+        heading: 'From waste to object',
+        steps: [
+          { title: 'Material collection', text: 'Together with schools, housing associations and businesses we collect a specific type of waste — plastic, glass or textiles.' },
+          { title: 'Workshop',            text: 'A public session where participants process materials by hand and build modules for the future installation.' },
+          { title: 'Assembly',            text: 'A curator-artist assembles all modules into a single public object.' },
+          { title: 'Opening',             text: 'A public unveiling — the installation stays in the city or travels on to the next location.' },
+        ],
+      },
+      impact: {
+        eyebrow: 'Impact',
+        heading: 'What we change',
+        accentPills: ['♻ Plastic as raw material', '🎨 Public art'],
+        pills: ['Community engagement', 'Environmental awareness', 'Cultural visibility', 'Business partnerships'],
+      },
+    },
+
+    kids: {
+      label: 'Recilo Project',
+      title: 'Recilo<br>Teens',
+      accent: '#E79A4C',
+      heroImg: 'assets/images/recilo_teens/8.png',
+      tags: ['Youth', 'Community', 'Volunteering', 'Leadership'],
+      stats: [
+        { value: '3,000+', label: 'Studies reviewed by WHO' },
+        { value: '6–18',   label: 'Age range' },
+        { value: '5',      label: 'Activity tracks' },
+      ],
+      concept: {
+        eyebrow: 'A meaningful start for the next generation',
+        heading: 'Real impact before college',
+        paragraphs: [
+          'Recilo Teens is a community for young people who want to do something real before college — not just talk about change, but participate in it. This is a space where teenagers can help clean the city, support environmental awareness, work on social media, participate in community organizing, and contribute to art made from recycled materials.',
+          'The focus here is not on abstract volunteering, but on real social impact that can become part of a strong future profile. Students can build experience in sustainability, public engagement, teamwork, leadership, and creative problem-solving — all of which are relevant to school, college, and future career paths. Public-health institutions like the CDC also describe student volunteer and training opportunities as valuable ways to build practical experience, leadership, and professional direction.',
+        ],
+      },
+      gallery: {
+        main: ['assets/images/recilo_teens/9.png', 'assets/images/recilo_teens/10.png', 'assets/images/recilo_teens/11.png'],
+        thumbs: ['assets/images/recilo_teens/13.png', 'assets/images/recilo_teens/8.png'],
+      },
+      how: {
+        eyebrow: 'What teens do',
+        heading: 'Five tracks of real work',
+        steps: [
+          { title: 'City clean-ups',         text: 'Organized waste collection in NYC neighborhoods — hands-on and visible.' },
+          { title: 'Environmental awareness', text: 'Supporting campaigns, events and messaging around sustainability.' },
+          { title: 'Social media',            text: 'Creating content that documents impact and builds the community.' },
+          { title: 'Community organizing',    text: 'Helping coordinate events, outreach and partnerships.' },
+          { title: 'Art from recycled materials', text: 'Contributing to Recilo Art installations and workshops.' },
+        ],
+      },
+      impact: {
+        eyebrow: 'Why it matters for students',
+        heading: 'What teens build',
+        accentPills: ['🏅 College-ready profile', '🌱 Real social impact'],
+        pills: ['Sustainability experience', 'Public engagement', 'Teamwork & leadership', 'Creative problem-solving', 'CDC-recognized value'],
+      },
+    },
+
+    studio: {
+      label: 'Recilo Project',
+      title: 'Recilo<br>Studio',
+      accent: '#B9CEB7',
+      heroImg: 'assets/images/recilo_studio/1.png',
+      tags: ['Well-being', 'Art therapy', 'Community', 'Inclusive'],
+      stats: [
+        { value: '45 min', label: 'To lower cortisol' },
+        { value: '3,000+', label: 'Studies — WHO review' },
+        { value: '100%',   label: 'Recycled materials' },
+      ],
+      concept: {
+        eyebrow: 'Create together. Feel better together.',
+        heading: 'Why it matters',
+        paragraphs: [
+          'Recilo Studio is a warm, welcoming space where people gather in small groups to create art from recycled plastic, cardboard, and other reclaimed materials. It is a place to slow down, feel accepted, connect with others, and unlock creative potential through collaborative making.',
+          'Creative work in small groups improves well-being by combining self-expression, social connection, and hands-on focus. Art-making can reduce stress: one study found that 45 minutes of visual art-making lowered cortisol levels in many participants, even among people without prior artistic experience. A major WHO evidence review covering more than 3,000 studies found that arts engagement supports health promotion, prevention of ill health, and better well-being across the lifespan.',
+        ],
+      },
+      gallery: {
+        main: ['assets/images/recilo_studio/2.png', 'assets/images/recilo_studio/3.png', 'assets/images/recilo_studio/4.png'],
+        thumbs: ['assets/images/recilo_studio/5.png', 'assets/images/recilo_studio/6.png', 'assets/images/recilo_studio/7.png', 'assets/images/recilo_studio/8.png'],
+      },
+      how: {
+        eyebrow: 'Who it is for',
+        heading: 'An inclusive space for everyone',
+        steps: [
+          { title: 'Women',                  text: 'A safe, supportive environment for creative expression and community.' },
+          { title: 'Children & teens',        text: 'Art-based interventions show positive effects on social interaction and emotional well-being.' },
+          { title: 'Older adults',            text: 'Arts engagement supports health and well-being across the lifespan — WHO review.' },
+          { title: 'Neurodivergent children', text: 'Creative arts interventions show positive effects on occupation-based outcomes and social skills for autistic children.' },
+          { title: 'People feeling isolated', text: 'Anyone who needs a supportive community and a sense of belonging.' },
+        ],
+      },
+      impact: {
+        eyebrow: 'What people receive',
+        heading: 'What you take home',
+        accentPills: ['🤝 Sense of belonging', '🎨 Creative confidence'],
+        pills: ['Calm & accepting environment', 'Meaningful social interaction', 'Emotional expression', 'Stress reduction', 'Something beautiful & shared'],
+      },
+    },
+  };
+
+  /* ============================================
+     OVERLAY OPEN / CLOSE
+     ============================================ */
+  function openProjectOverlay(projectKey, triggerEl) {
+    const data = PROJECTS[projectKey];
+    if (!data) return;
+
+    const overlay = document.getElementById('projectOverlay');
+
+    // ── Compute zoom-expand origin from trigger card ──
+    const rect = triggerEl.getBoundingClientRect();
+    const W = window.innerWidth;
+    const H = window.innerHeight;
+    const top    = (rect.top    / H * 100).toFixed(1) + '%';
+    const left   = (rect.left   / W * 100).toFixed(1) + '%';
+    const bottom = ((H - rect.bottom) / H * 100).toFixed(1) + '%';
+    const right  = ((W - rect.right)  / W * 100).toFixed(1) + '%';
+    overlay.style.setProperty('--overlay-origin-clip', `inset(${top} ${right} ${bottom} ${left} round 8px)`);
+
+    // ── Set accent color ──
+    overlay.style.setProperty('--overlay-accent', data.accent);
+
+    // ── Hero ──
+    const heroImg = document.getElementById('ovHeroImg');
+    heroImg.src = data.heroImg;
+    heroImg.alt = data.title.replace('<br>', ' ');
+    document.getElementById('ovLabel').textContent = data.label;
+    document.getElementById('ovTitle').innerHTML = data.title;
+
+    const tagsEl = document.getElementById('ovTags');
+    tagsEl.innerHTML = data.tags.map(t => `<span class="ov-hero__tag">${t}</span>`).join('');
+
+    // ── Stats ──
+    const statsEl = document.getElementById('ovStats');
+    statsEl.innerHTML = data.stats.map(s =>
+      `<div class="ov-stat"><div class="ov-stat__value">${s.value}</div><div class="ov-stat__label">${s.label}</div></div>`
+    ).join('');
+
+    // ── Concept ──
+    const conceptEl = document.getElementById('ovConcept');
+    conceptEl.innerHTML = `
+      <div class="ov-section__eyebrow">${data.concept.eyebrow}</div>
+      <div class="ov-section__heading">${data.concept.heading}</div>
+      ${data.concept.paragraphs.map(p => `<p class="ov-section__text">${p}</p>`).join('')}
+    `;
+
+    // ── Gallery ──
+    const allImages = [...data.gallery.main, ...data.gallery.thumbs];
+    const galleryEl = document.getElementById('ovGallery');
+    galleryEl.innerHTML = `
+      <div class="ov-gallery__eyebrow">Gallery</div>
+      <div class="ov-gallery__carousel">
+        ${allImages.map(src => `
+          <div class="ov-gallery__slide">
+            <img src="${src}" alt="" loading="lazy"/>
+          </div>`).join('')}
+      </div>
+    `;
+
+    // ── How it works ──
+    const howEl = document.getElementById('ovHow');
+    howEl.innerHTML = `
+      <div class="ov-section__eyebrow">${data.how.eyebrow}</div>
+      <div class="ov-section__heading">${data.how.heading}</div>
+      <div class="ov-steps">
+        ${data.how.steps.map((s, i) => `
+          <div class="ov-step">
+            <div class="ov-step__num">0${i+1}</div>
+            <div class="ov-step__text"><strong>${s.title}</strong>${s.text}</div>
+          </div>`).join('')}
+      </div>
+    `;
+
+    // ── Impact ──
+    const impactEl = document.getElementById('ovImpact');
+    impactEl.innerHTML = `
+      <div class="ov-section__eyebrow">${data.impact.eyebrow}</div>
+      <div class="ov-section__heading">${data.impact.heading}</div>
+      <div class="ov-pills">
+        ${data.impact.accentPills.map(p => `<span class="ov-pill ov-pill--accent">${p}</span>`).join('')}
+        ${data.impact.pills.map(p => `<span class="ov-pill">${p}</span>`).join('')}
+      </div>
+    `;
+
+    // ── Open ──
+    document.getElementById('ovBody').scrollTop = 0;
+    overlay.classList.remove('is-closing');
+    overlay.style.animation = 'none';
+    overlay.offsetHeight; // reflow
+    overlay.style.animation = '';
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeProjectOverlay() {
+    const overlay = document.getElementById('projectOverlay');
+    overlay.classList.add('is-closing');
+    overlay.addEventListener('animationend', () => {
+      overlay.classList.remove('is-open', 'is-closing');
+      document.body.style.overflow = '';
+    }, { once: true });
+  }
+
+  // Close on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeProjectOverlay();
+  });
+  </script>
 </body>
 </html>
