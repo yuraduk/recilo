@@ -132,6 +132,23 @@
   /* name in brand color — set per variant */
 }
 
+.project-card__explore {
+  display: block;
+  margin-top: 0.75rem;
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  opacity: 0.7;
+  transition: opacity var(--duration-fast) var(--ease-out-expo),
+              transform var(--duration-fast) var(--ease-out-expo);
+}
+
+.project-card:hover .project-card__explore {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
 /* ====================================
    BRAND COLOUR ACCENTS
    Top bar + coloured name per sub-brand
@@ -141,10 +158,17 @@
 .project-card--studio::before  { background: var(--color-ash-grey); }
 .project-card--healing::before { background: #FFEDA8; }
 
-.project-card--art     .project-card__name { color: var(--color-art); }
-.project-card--kids    .project-card__name { color: var(--color-kids); }
-.project-card--studio  .project-card__name { color: var(--color-ash-grey); }
-.project-card--healing .project-card__name { color: #FFEDA8; }
+.project-card--art     .project-card__name,
+.project-card--art     .project-card__explore { color: var(--color-art); }
+
+.project-card--kids    .project-card__name,
+.project-card--kids    .project-card__explore { color: var(--color-kids); }
+
+.project-card--studio  .project-card__name,
+.project-card--studio  .project-card__explore { color: var(--color-ash-grey); }
+
+.project-card--healing .project-card__name,
+.project-card--healing .project-card__explore { color: #FFEDA8; }
 
 /* ====================================
    DESKTOP — 3-column grid, fixed gap
