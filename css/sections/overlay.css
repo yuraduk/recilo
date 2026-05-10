@@ -100,17 +100,17 @@
   pointer-events: none;
 }
 
-/* Top bar */
+/* Top bar — own row above hero, guaranteed no overlap */
 .ov-topbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem var(--ov-side);
+  padding: 0.85rem var(--ov-side);
+  background: var(--color-bg-darker);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  /* container constraint */
+  /* (full-width bg, content centred via padding) */
 }
 
 .ov-back {
@@ -171,12 +171,12 @@
 .ov-hero__title {
   font-family: var(--font-primary);
   font-weight: 800;
-  font-size: clamp(2.5rem, 9vw, 5.5rem);
+  font-size: clamp(1.75rem, 7vw, 5.5rem);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
   text-transform: uppercase;
   color: var(--color-white);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
 .ov-hero__tags {

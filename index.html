@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="css/sections/founder.css?v=3" />
   <link rel="stylesheet" href="css/sections/cta.css?v=1" />
   <link rel="stylesheet" href="css/sections/footer.css?v=1" />
-  <link rel="stylesheet" href="css/sections/overlay.css?v=1" />
+  <link rel="stylesheet" href="css/sections/overlay.css?v=2" />
 </head>
 <body>
   <!-- ============================================
@@ -597,20 +597,20 @@
        ============================================ -->
   <div class="project-overlay" id="projectOverlay" role="dialog" aria-modal="true" aria-label="Project details">
 
+    <!-- TOPBAR — sits above hero, never overlaps -->
+    <div class="ov-topbar">
+      <button class="ov-back" onclick="closeProjectOverlay()">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 2L4 7l5 5"/>
+        </svg>
+        Back
+      </button>
+      <button class="ov-close" onclick="closeProjectOverlay()" aria-label="Close">✕</button>
+    </div>
+
     <!-- HERO -->
     <div class="ov-hero">
       <img class="ov-hero__img" id="ovHeroImg" src="" alt="" />
-
-      <div class="ov-topbar">
-        <button class="ov-back" onclick="closeProjectOverlay()">
-          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 2L4 7l5 5"/>
-          </svg>
-          Back
-        </button>
-        <button class="ov-close" onclick="closeProjectOverlay()" aria-label="Close">✕</button>
-      </div>
-
       <div class="ov-hero__content">
         <div class="ov-hero__label" id="ovLabel"></div>
         <div class="ov-hero__title" id="ovTitle"></div>
