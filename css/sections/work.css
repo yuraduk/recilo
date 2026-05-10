@@ -31,7 +31,7 @@
    ==================================== */
 .projects__track {
   display: flex;
-  gap: var(--space-md);
+  gap: var(--space-md); /* matches impact section mobile gap */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -137,13 +137,13 @@
 .project-card--healing .project-card__name { color: #FFEDA8; }
 
 /* ====================================
-   DESKTOP — 4 in a row, compact gap
+   DESKTOP — 3-column grid, fixed gap
    ==================================== */
 @media (min-width: 768px) {
   .projects__track {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-sm);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl); /* matches impact section desktop gap */
     overflow-x: visible;
     scroll-snap-type: none;
     margin-right: 0;
@@ -154,10 +154,11 @@
   .project-card {
     flex: none;
     min-width: 0;
+    max-width: none;
   }
 
-  /* Scale name with card width — card is ~25% of viewport */
+  /* Text scales with card width (~1/3 of viewport) */
   .project-card__name {
-    font-size: clamp(1rem, 2vw, 1.75rem);
+    font-size: clamp(1rem, 2.5vw, var(--text-3xl));
   }
 }
