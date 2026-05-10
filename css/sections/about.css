@@ -76,6 +76,17 @@
   margin-top: var(--space-lg);
 }
 
+.about__section-title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-prussian-blue);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xs);
+}
+
 .about__image {
   width: 100%;
   aspect-ratio: 4 / 5;
