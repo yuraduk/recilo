@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="css/animations.css?v=1" />
   <link rel="stylesheet" href="css/sections/nav.css?v=1" />
   <link rel="stylesheet" href="css/sections/hero.css?v=2" />
-  <link rel="stylesheet" href="css/sections/about.css?v=2" />
+  <link rel="stylesheet" href="css/sections/about.css?v=3" />
   <link rel="stylesheet" href="css/sections/problem.css?v=1" />
   <link rel="stylesheet" href="css/sections/model.css?v=3" />
   <link rel="stylesheet" href="css/sections/work.css?v=9" />
@@ -133,20 +133,57 @@
               Recilo is a new kind of community that brings people together around environmental care, beauty, creativity, and social impact.
             </p>
             <p class="about__text" data-animate="fade-up" style="--delay: 330ms;">
-              It is not just about picking up plastic. It is about building a vibrant, positive, and inspiring community where caring for the planet becomes part of a lifestyle, a form of self-expression, and even a future career path.
+              It is not just about picking up waste. It is about building a vibrant, positive, and inspiring community where caring for the planet becomes part of a lifestyle, a form of self-expression, and even a future career path.
             </p>
 
             <p class="about__section-title" data-animate="fade-up" style="--delay: 420ms;">Mission</p>
             <p class="about__text" data-animate="fade-up" style="--delay: 490ms;">
-              To help clean New York City from plastic by bringing people together in a friendly, uplifting, and socially meaningful community.
+              To help clean New York City from waste by bringing people together in a friendly, uplifting, and socially meaningful community.
             </p>
-            <p class="about__text about__text--label" data-animate="fade-up" style="--delay: 560ms;">We want to:</p>
-            <ul class="about__list" data-animate="fade-up" style="--delay: 620ms;">
-              <li>make the city cleaner</li>
-              <li>turn environmental action into a visible, beautiful, and engaging public movement</li>
-              <li>show that caring for nature can be modern, inspiring, and community-driven</li>
-              <li>create opportunities for people who want to contribute to society and the planet in a meaningful way</li>
-            </ul>
+            <svg class="about__mission-grid" viewBox="0 0 400 112" fill="none" xmlns="http://www.w3.org/2000/svg" data-animate="fade-up" style="--delay: 560ms;" aria-label="Mission: cleaner city, visible and beautiful action, modern and inspiring, real opportunities" role="img">
+
+              <!-- Connecting dashed line -->
+              <line x1="50" y1="38" x2="350" y2="38" stroke="#B9CEB7" stroke-width="1.5" stroke-dasharray="3 5"/>
+
+              <!-- 1: Recycle — Cleaner city -->
+              <circle cx="50" cy="38" r="22" fill="#EEF2FA" stroke="#1C4187" stroke-width="1" opacity="0.8"/>
+              <g transform="translate(38,26)">
+                <path d="M4 12a8 8 0 0 1 8-8 8.5 8.5 0 0 1 5.9 2.4L20 9" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M20 4v5h-5" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M20 12a8 8 0 0 1-8 8 8.5 8.5 0 0 1-5.9-2.4L4 15" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M4 20v-5h5" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round"/>
+              </g>
+              <text x="50" y="76" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="700" fill="#1C4187">Cleaner</text>
+              <text x="50" y="87" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="700" fill="#1C4187">city</text>
+
+              <!-- 2: Sparkle — Visible & beautiful -->
+              <circle cx="150" cy="38" r="22" fill="#EEF2FA" stroke="#1C4187" stroke-width="1" opacity="0.8"/>
+              <g transform="translate(138,26)">
+                <path d="M12 4v3M12 17v3M5.6 5.6l2 2M14.4 14.4l2 2M4 12h3M17 12h3M5.6 18.4l2-2M14.4 9.6l2-2" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round"/>
+              </g>
+              <text x="150" y="76" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="700" fill="#1C4187">Visible &amp;</text>
+              <text x="150" y="87" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="700" fill="#1C4187">beautiful</text>
+
+              <!-- 3: Leaf — Modern & inspiring -->
+              <circle cx="250" cy="38" r="22" fill="#EEF2FA" stroke="#1C4187" stroke-width="1" opacity="0.8"/>
+              <g transform="translate(238,26)">
+                <path d="M9 18A5 5 0 0 1 8 8.5C12 8 13 7.5 14.5 6c.7 1.4 1.5 3 1.5 5.5 0 3.8-3.2 7-7 6.5Z" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 18.5c0-2 1.2-3.7 3.3-4.1" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round"/>
+              </g>
+              <text x="250" y="76" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="700" fill="#1C4187">Modern &amp;</text>
+              <text x="250" y="87" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="700" fill="#1C4187">inspiring</text>
+
+              <!-- 4: People — Real opportunities -->
+              <circle cx="350" cy="38" r="22" fill="#EEF2FA" stroke="#1C4187" stroke-width="1" opacity="0.8"/>
+              <g transform="translate(338,26)">
+                <path d="M15 19v-1.5a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3V19" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round"/>
+                <circle cx="9" cy="7.5" r="2.5" stroke="#1C4187" stroke-width="1.6"/>
+                <path d="M19 19v-1.5a3 3 0 0 0-2.3-2.9" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M13 5.1a3 3 0 0 1 0 5.8" stroke="#1C4187" stroke-width="1.6" stroke-linecap="round"/>
+              </g>
+              <text x="350" y="76" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="700" fill="#1C4187">Real</text>
+              <text x="350" y="87" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="700" fill="#1C4187">opportunities</text>
+            </svg>
           </div>
         </div>
       </div>

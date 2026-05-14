@@ -65,6 +65,12 @@
   background-color: var(--color-tech-blue);
 }
 
+.about__mission-grid {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-md);
+}
+
 .about__tagline {
   font-family: var(--font-secondary);
   font-style: italic;
