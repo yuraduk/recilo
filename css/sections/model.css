@@ -164,6 +164,20 @@
 }
 
 /* ====================================
+   MOBILE OVERRIDES (< 768 px)
+   ==================================== */
+@media (max-width: 767px) {
+  .model {
+    min-height: auto;
+    padding-bottom: calc(var(--space-2xl) / 2);
+  }
+
+  .model__header {
+    margin-bottom: calc(var(--space-2xl) / 2);
+  }
+}
+
+/* ====================================
    MOBILE TIMELINE (< 768 px)
    ==================================== */
 .model__timeline {
@@ -198,7 +212,7 @@
   display: flex;
   align-items: baseline;
   gap: var(--space-lg);
-  padding: var(--space-xl) 0;
+  padding: var(--space-md) 0;
 }
 
 .model__timeline-num {
