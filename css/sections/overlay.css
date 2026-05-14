@@ -286,6 +286,36 @@
   margin-top: 0.75rem;
 }
 
+.ov-section__text strong {
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.ov-section__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.ov-section__list li {
+  font-family: var(--font-secondary);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-wisteria-blue);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.ov-section__list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--overlay-accent, var(--color-art));
+  opacity: 0.7;
+}
+
 /* ── Gallery carousel ────────────────────────── */
 .ov-gallery {
   padding: 2rem 0 2rem var(--section-padding-x);
