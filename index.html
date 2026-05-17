@@ -90,13 +90,14 @@
           We turn waste into art.<br />And people into creators.
         </p>
         <a
-          href="#join"
+          href="https://buy.stripe.com/3cIbJ151M5I14rze6t7AI04"
           class="btn btn--primary hero__cta"
+          target="_blank"
+          rel="noopener noreferrer"
           data-animate="fade-up"
-          data-link="collaborate"
           style="--delay: 500ms;"
         >
-          Get Involved
+          Support Our Work
         </a>
       </div>
 
@@ -682,13 +683,13 @@
       <div class="ov-section" id="ovImpact"></div>
 
       <!-- CTA -->
-      <div class="ov-cta">
+      <div class="ov-cta" id="ovCta">
         <div>
           <div class="ov-cta__text">Want to join<br>the next project?</div>
           <div class="ov-cta__sub">Open workshops, partnerships & donations</div>
         </div>
-        <a href="#contact" class="ov-cta__btn" onclick="closeProjectOverlay()">
-          Get in touch
+        <a href="https://buy.stripe.com/3cIbJ151M5I14rze6t7AI04" class="ov-cta__btn" target="_blank" rel="noopener noreferrer">
+          Support Our Work
           <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 7h8M8 4l3 3-3 3"/>
           </svg>
@@ -918,6 +919,9 @@
         ${data.impact.pills.map(p => `<span class="ov-pill">${p}</span>`).join('')}
       </div>
     `;
+
+    // ── CTA — only for Art ──
+    document.getElementById('ovCta').style.display = projectKey === 'art' ? '' : 'none';
 
     // ── Open ──
     document.getElementById('ovBody').scrollTop = 0;
