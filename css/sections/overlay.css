@@ -325,6 +325,57 @@
   width: 100%;
 }
 
+.ov-gallery__track {
+  position: relative;
+}
+
+/* Arrow buttons — desktop only */
+.ov-gallery__arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(8, 18, 46, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--duration-fast) ease,
+              color var(--duration-fast) ease,
+              opacity var(--duration-fast) ease,
+              border-color var(--duration-fast) ease;
+  padding: 0;
+  line-height: 0;
+}
+
+.ov-gallery__arrow:hover {
+  background: rgba(8, 18, 46, 0.92);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.ov-gallery__arrow:disabled {
+  opacity: 0.2;
+  cursor: default;
+  pointer-events: none;
+}
+
+.ov-gallery__arrow svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.ov-gallery__arrow--prev { left:  10px; }
+.ov-gallery__arrow--next { right: 10px; }
+
 .ov-gallery__eyebrow {
   font-family: var(--font-primary);
   font-size: 0.62rem;
@@ -376,6 +427,28 @@
   .ov-gallery__slide {
     flex: 0 0 340px;
     max-width: 340px;
+  }
+
+  .ov-gallery__arrow { display: flex; }
+
+  /* Show thin scrollbar on desktop */
+  .ov-gallery__carousel {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  }
+  .ov-gallery__carousel::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+  }
+  .ov-gallery__carousel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .ov-gallery__carousel::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+  }
+  .ov-gallery__carousel::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
   }
 }
 
